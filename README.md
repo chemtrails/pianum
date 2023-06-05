@@ -1,8 +1,10 @@
-# Pianum
+Install
 
 ```bash
-pip install git+https://github.com/chemtrails/pianum
+pip install pianum
 ```
+
+Use
 
 ```py
 import pianum as pn
@@ -13,10 +15,10 @@ root = 3
 interval = pn.interval(root, Interval.M3)
 print(interval)
 
-scale = pn.scale(root, Scale.major)
+scale = pn.scale(root, Scale.Major)
 print(scale)
 
-chord = pn.chord(root, Chord.major7)
+chord = pn.chord(root, Chord.Major7)
 print(chord)
 
 inversion = pn.invert_up(chord)

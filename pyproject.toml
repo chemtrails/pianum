@@ -5,11 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "pianum"
 version = "0.0.1"
-description = "Music Theory package"
+description = "Music theory tools"
 readme = "README.md"
 requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "License :: OSI Approved",
     "Operating System :: OS Independent",
 ]
 

@@ -46,16 +46,25 @@ def ints_to_notes(notes):
 
 def ints_to_chord(notes):
     intervals  = [0] + [notes[i + 1] - note for i, note in enumerate(notes) if i + 1 < len(notes)]
-    return Chord(tuple(intervals)) or None
+    try:
+        return Chord(tuple(intervals))
+    except ValueError:
+        return None
 
 
 def ints_to_scale(notes):
     intervals  = [0] + [notes[i + 1] - note for i, note in enumerate(notes) if i + 1 < len(notes)]
-    return Scale(tuple(intervals)) or None
+    try:
+        return Scale(tuple(intervals))
+    except ValueError:
+        return None
 
 
 def ints_to_interval(notes):
-    return Interval(max(notes) - min(notes)) or None
+    try:
+        return Interval(max(notes) - min(notes))
+    except ValueError:
+        return None
 
 
 def note_to_int(note: str, octave:int = 0):
